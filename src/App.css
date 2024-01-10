@@ -21,3 +21,15 @@
     color: var(--default-color);
     background-color: #fff;
 }
+
+.likeBtn:hover {
+    border-color: var(--active-color);
+    color: var(--active-color);
+}
+
+.liked,
+.liked:hover {
+    background-color: var(--active-color);
+    border-color: var(--active-color);
+    color: #fff;
+}

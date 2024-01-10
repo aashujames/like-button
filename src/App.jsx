@@ -11,7 +11,10 @@ function App() {
 
     return (
         <div>
-            <button className={`likeBtn`} onClick={handleLikeUnlike}>
+            <button
+                className={`likeBtn ${liked ? "liked" : ""}`}
+                onClick={handleLikeUnlike}
+            >
                 <HeartIcon /> {liked ? "Liked" : "Like"}
             </button>
         </div>
