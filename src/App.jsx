@@ -38,12 +38,14 @@ function App() {
     return (
         <div>
             <button
+                disabled={isFetching}
                 className={`likeBtn ${liked ? "liked" : ""}`}
                 onClick={handleLikeUnlike}
             >
-                <HeartIcon /> {liked ? "Liked" : "Like"}
+                {isFetching ? <SpinnerIcon /> : <HeartIcon />}{" "}
+                {liked ? "Liked" : "Like"}
             </button>
-            {error && <div>{error}</div>}
+            {error && <div className="error">{error}</div>}
         </div>
     );
 }
